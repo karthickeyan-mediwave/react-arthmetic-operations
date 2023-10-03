@@ -2,29 +2,30 @@
 import { useState } from "react"
 function Message() {
    
-    const [input, setInput] = useState({
-        num1: 0,
-        num2: 0,
+    let [input, setInput] = useState({
+        num1: '',
+        num2: '',
     });
-    const [result, setResult] = useState("")
+    let [result, setResult] = useState(0)
 
-    const addClick = function(){
-        const { num1, num2 } = input;
+    let addClick = function(){
+        let { num1, num2 } = input;
         setResult(Number(num1) + Number(num2));
     }
-    const subtract = function(){
-        const { num1, num2 } = input;
+    let subtract = function(){
+        let { num1, num2 } = input;
         setResult(Number(num1) - Number(num2));
     }
-    const multiply = function(){
-        const { num1, num2 } = input;
+    let multiply = function(){
+        let { num1, num2 } = input;
         setResult(Number(num1) * Number(num2));
     }
-    const divide = function(){
-        const { num1, num2 } = input;
+    let divide = function(){
+        let { num1, num2 } = input;
         setResult(Number(num1) / Number(num2));
+    
     }
-    const handleInput = function(e){
+    let handleInput = function(e:any){
         setInput({
             ...input, 
             [e.target.name]: e.target.value
@@ -48,3 +49,6 @@ function Message() {
 }
 
 export default Message
+
+
+
