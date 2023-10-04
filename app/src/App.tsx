@@ -1,12 +1,12 @@
 import './App.css'
-import Message from './Components/Message'
+import Learn from './Components/Learn'
 
 function App() {
 
   return (
     <>
       <div className='container'>
-        <Message />
+        <Learn />
       </div>
       
     </>

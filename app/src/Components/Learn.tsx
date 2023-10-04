@@ -1,8 +1,14 @@
-import { useState } from "react"
-function Message() {
-let [input, setInput] = useState({
-num1: '',
-num2: '',
+import React, { useState } from "react"
+
+
+interface forinput{
+num1 : number| undefined,
+num2 : number| undefined
+}
+function Learn() {
+let [input, setInput] = useState<forinput>({
+num1: undefined,
+num2: undefined,
 });
 let [result, setResult] = useState(0)
 
@@ -23,7 +29,7 @@ let divide = function(){
 let { num1, num2 } = input;
 setResult(Number(num1) / Number(num2));
 }
-let handleInput = function(e:any){
+let handleInput = function(e:React.ChangeEvent<HTMLInputElement>){
 setInput({
 ...input,
 [e.target.name]: e.target.value
@@ -48,8 +54,14 @@ return (
 }
 
 
-export default Message
 
 
 
 
+
+
+
+
+
+
+export default Learn
